@@ -1,0 +1,8 @@
+<h1><%= @author.author_name %> quotes</h1>
+
+<% @author.quotes.each do |q| %>
+  <p><%= q.quote %></p>
+<% end %>
+
+<a href="/quotes/new">Add quote</a><br />
+<a href="/quotes">Home</a>
