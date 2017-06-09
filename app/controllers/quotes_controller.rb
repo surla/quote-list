@@ -13,6 +13,7 @@ class QuotesController < ApplicationController
     @quote = Quote.new(quote: params[:quote])
     @quote.users << current_user
     @quote.author = Author.find_or_create_by(name: params[:author_name])
+    @quote.topic = Topic.find_or_create_by(name: params[:topic_name])
     if @quote.save
       erb :'/quotes/show'
     else

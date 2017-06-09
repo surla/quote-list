@@ -1,6 +1,9 @@
 <h1>Quote</h1>
 
-<p><%= @quote.quote %> - <%= @quote.author.name %></p>
+<div>
+  <p><%= q.quote %> - <%= q.author.name %></p>
+  <p> Topic: <%= q.topic.name %></p>
+</div>
 
 <div>
   <a href="/quotes/new">New quote</a>

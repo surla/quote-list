@@ -2,7 +2,10 @@
 
 
 <% @quotes.each do |q| %>
-  <p><%= q.quote %> - <%= q.author.name %></p>
+  <div>
+    <p><%= q.quote %> - <%= q.author.name %></p>
+    <p> Topic: <%= q.topic.name %></p>
+  </div>
 <% end %>
 
 
