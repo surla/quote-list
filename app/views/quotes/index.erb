@@ -1,4 +1,9 @@
 <h1>Quotes List</h1>
 
+<% @quotes.each do |q| %>
+  <p><%= q.quote %> - <%= q.author.author_name %></p>
+<% end %>
 
+
+<br />
 <a href="/quotes/new">New quote</a>
