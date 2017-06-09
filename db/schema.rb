@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20170609151509) do
 
   create_table "authors", force: :cascade do |t|
-    t.string "author_name"
+    t.string "name"
   end
 
   create_table "quotes", force: :cascade do |t|
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20170609151509) do
   end
 
   create_table "topics", force: :cascade do |t|
-    t.string "topic_name"
+    t.string "name"
   end
 
   create_table "user_quotes", force: :cascade do |t|
