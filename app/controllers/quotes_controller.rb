@@ -19,4 +19,10 @@ class QuotesController < ApplicationController
       erb :'/quotes/new'
     end
   end
+
+  get '/quotes/:id' do
+    @quote = Quote.find(params[:id])
+    erb :'/quotes/show'
+  end
+
 end
