@@ -2,6 +2,13 @@
 
 <%= @user.username %>
 
+<% @user.quotes.each do |q| %>
+  <div>
+    <p><%= q.quote %> - <%= q.author.name %></p>
+    <p> Topic: <%= q.topic.name %></p>
+  </div>
+<% end %>
+
 <h3><a href="/quotes/new">Add new quote</a></h3>
 
 <br />
