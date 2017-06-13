@@ -6,6 +6,13 @@
 </div>
 
 <div>
+  <form action="/quotes/<%= @quote.id%>/delete" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete">
+  </form>
+</div>
+
+<div>
   <a href="/quotes/new">New quote</a>
   <a href="/quotes">Home</a>
 </div>

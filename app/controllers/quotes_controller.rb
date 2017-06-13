@@ -26,4 +26,10 @@ class QuotesController < ApplicationController
     erb :'/quotes/show'
   end
 
+  post '/quotes/:id/delete' do
+    @quote = Quote.find(params[:id])
+    @quote.delete
+    redirect :'/quotes'
+  end
+
 end
