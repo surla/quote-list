@@ -4,7 +4,7 @@
 
 <% @user.quotes.each do |q| %>
   <div>
-    <p><%= q.quote %> - <%= q.author.name %></p>
+    <p><a href="/quotes/<%= q.id %>"><%= q.quote %></a> - <%= q.author.name %></p>
     <p> Topic: <%= q.topic.name %></p>
   </div>
 <% end %>
