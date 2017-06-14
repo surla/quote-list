@@ -3,4 +3,10 @@ class TopicsController < ApplicationController
     @topics = Topic.all
     erb :'/topics/index'
   end
+
+  get '/topics/:id' do
+    @topic = Topic.find(params[:id])
+    erb :'/topics/show'
+  end
+
 end

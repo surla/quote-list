@@ -1,0 +1,5 @@
+<h1><%= @topic.name %> quotes</h1>
+
+<% @topic.quotes.each do |q| %>
+  <%= q.quote %> - <%= q.author.name %>
+<% end %>
