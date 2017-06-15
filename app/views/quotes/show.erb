@@ -4,13 +4,7 @@
   <p><%= @quote.quote %> - <%= @quote.author.name %></p>
   <p> Topic: <%= @quote.topic.name %></p>
 </div>
-
-<div>
-  <form action="/quotes/<%= @quote.id%>/delete" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="delete">
-  </form>
-</div>
+<p><a href="/quotes/<%= @quote.id %>/edit">Edit</a></p>
 
 <div>
   <a href="/quotes/new">New quote</a>
