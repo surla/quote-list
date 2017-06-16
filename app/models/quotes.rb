@@ -6,4 +6,5 @@ class Quote < ActiveRecord::Base
   has_many :users, through: :user_quotes
 
   validates_presence_of :quote
+  validates_associated :author, :topic
 end

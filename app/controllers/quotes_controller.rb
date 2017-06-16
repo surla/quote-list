@@ -5,14 +5,14 @@ class QuotesController < ApplicationController
     erb :'/quotes/index'
   end
 
-  get '/quotes/:id' do
-    @quote = Quote.find(params[:id])
-    erb :'/quotes/show'
-  end
-
   get '/quotes/new' do
     @quote = Quote.new
     erb :'/quotes/new'
+  end
+
+  get '/quotes/:id' do
+    @quote = Quote.find(params[:id])
+    erb :'/quotes/show'
   end
 
   get '/quotes/:id/edit' do
@@ -44,12 +44,9 @@ class QuotesController < ApplicationController
     end
   end
 
-
-
   post '/quotes/:id/delete' do
     @quote = Quote.find(params[:id])
     @quote.delete
     redirect :'/quotes'
   end
-
 end
