@@ -1,23 +1,38 @@
 class QuotesController < ApplicationController
 
   get '/quotes' do
-    @quotes = Quote.all
-    erb :'/quotes/index'
+    if logged_in?
+      @quotes = Quote.all
+      erb :'/quotes/index'
+    else
+      redirect :'/login'
+    end
   end
 
   get '/quotes/new' do
-    @quote = Quote.new
-    erb :'/quotes/new'
+    if logged_in?
+      @quote = Quote.new
+      erb :'/quotes/new'
+    else
+      redirect :'/login'
+    end
   end
 
   get '/quotes/:id' do
-    @quote = Quote.find(params[:id])
-    erb :'/quotes/show'
+    if logged_in?
+      @quote = Quote.find(params[:id])
+      erb :'/quotes/show'
+    else
+      redirect :'/login'
   end
 
   get '/quotes/:id/edit' do
-    @quote = Quote.find(params[:id])
-    erb :'/quotes/edit'
+    if logged_in?
+      @quote = Quote.find(params[:id])
+      erb :'/quotes/edit'
+    else
+      redirect :'/login'
+    end
   end
 
 
