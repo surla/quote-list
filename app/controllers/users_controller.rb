@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  get '/users/index' do
+  get '/users' do
     @user = User.find(session[:user_id])
     erb :'/users/index'
   end
