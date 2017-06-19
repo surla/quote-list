@@ -1,6 +1,12 @@
 <h1>Quote</h1>
 
 <div>
+  <% unless locals.empty? %>
+    <%= message %>
+  <% end %>
+</div>
+
+<div>
   <p><%= @quote.quote %> - <%= @quote.author.name %></p>
   <p> Topic: <%= @quote.topic.name %></p>
 </div>

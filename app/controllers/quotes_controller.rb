@@ -24,10 +24,11 @@ class QuotesController < ApplicationController
       erb :'/quotes/show'
     else
       redirect :'/login'
+    end
   end
 
   get '/quotes/:id/edit' do
-    if logged_in?
+    if logged_in? && current_user
       @quote = Quote.find(params[:id])
       erb :'/quotes/edit'
     else
@@ -35,14 +36,13 @@ class QuotesController < ApplicationController
     end
   end
 
-
   post '/quotes/new' do
     @quote = Quote.new(quote: params[:quote])
-    @quote.users << current_user
     @quote.author = Author.find_or_create_by(name: params[:author])
     @quote.topic = Topic.find_or_create_by(name: params[:topic])
     if @quote.save
-      erb :'/quotes/show'
+      @quote.users << current_user
+      erb :'/quotes/show' , locals: {message: "Successfully created quote."}
     else
       erb :'/quotes/new'
     end
@@ -59,7 +59,7 @@ class QuotesController < ApplicationController
     end
   end
 
-  post '/quotes/:id/delete' do
+  delete '/quotes/:id/delete' do
     @quote = Quote.find(params[:id])
     @quote.delete
     redirect :'/quotes'
