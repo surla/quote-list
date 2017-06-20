@@ -1,5 +1,11 @@
 <h1>Quotes List</h1>
 
+<div>
+  <% if locals.any? %>
+    <%= message %>
+  <% end %>
+</div>
+
 <% @quotes.each do |q| %>
   <div>
     <p><%= q.quote %> - <%= q.author.name %></p>

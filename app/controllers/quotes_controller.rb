@@ -32,7 +32,7 @@ class QuotesController < ApplicationController
     if logged_in? && current_user.quotes.include?(@quote)
       erb :'/quotes/edit'
     else
-      redirect :'/login'
+      erb :'/quotes/show', locals: {message: "Cannot edit other user's quote"}
     end
   end
 
@@ -53,7 +53,7 @@ class QuotesController < ApplicationController
     @quote.author = Author.find_or_create_by(name: params[:author])
     @quote.topic = Topic.find_or_create_by(name: params[:topic])
     if @quote.save
-      erb :'/quotes/show'
+      erb :'/quotes/show', locals: {message: "Successfully edited quote"}
     else
       erb :'/quotes/edit'
     end
