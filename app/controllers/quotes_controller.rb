@@ -28,8 +28,8 @@ class QuotesController < ApplicationController
   end
 
   get '/quotes/:id/edit' do
-    if logged_in? && current_user
-      @quote = Quote.find(params[:id])
+    @quote = Quote.find(params[:id])
+    if logged_in? && current_user.quotes.include?(@quote)
       erb :'/quotes/edit'
     else
       redirect :'/login'
