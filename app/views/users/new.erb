@@ -1,20 +1,22 @@
-<h1>Sign up</h1>
+<div class="row">
+  <h2>Sign up</h2>
 
-<% if @user.errors.any? %>
-  <div>
-    <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+  <% if @user.errors.any? %>
+    <div>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<form action="/signup" method="post">
-  <p><input type="text" name="username" placeholder="Username"></p>
-  <p><input type="password" name="password" placeholder="Password"></p>
-  <p><input type="password" name="password_confirmation" placeholder="Confirm password"></p>
-  <p><input type="submit" name="" value="Sign up"></p>
-</form>
+  <form action="/signup" method="post">
+    <p><input type="text" name="username" placeholder="Username"></p>
+    <p><input type="password" name="password" placeholder="Password"></p>
+    <p><input type="password" name="password_confirmation" placeholder="Confirm password"></p>
+    <p><input type="submit" value="Sign up" class="submit"></p>
+  </form>
 
-<p>Have an account? <a href="/login">Log in</a></p>
+  <p>Have an account? <a href="/login">Log in</a></p>
+</div>

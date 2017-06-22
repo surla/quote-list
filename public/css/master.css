@@ -47,12 +47,12 @@ a {
 
 /*--- Form styling ---*/
 
-input[type="submit"]:hover {
-  color: ##1abc9c;
-}
-
 input, textarea, .submit {
   width: 300px;
   height: 50px;
   padding-left: 15px;
+}
+
+input[type="submit"]:hover {
+  color: ##1abc9c;
 }
