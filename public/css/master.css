@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  padding-top: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.color-bar {
+  height: 15px;
+  background-color: #1abc9c;
+}
+
+.title {
+  padding-left: 35px;
+  padding-top: 10px;
+}
+
+/*--- Form styling ---*/
+
+input[type="submit"]:hover {
+  color: ##1abc9c;
+}
+
+input, textarea, .submit {
+  width: 300px;
+  height: 50px;
+  padding-left: 15px;
+}
