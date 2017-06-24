@@ -41,8 +41,26 @@ a {
 }
 
 .title {
+  display: inline-block;
   padding-left: 35px;
   padding-top: 10px;
+}
+
+/*--- Unordered list style ---*/
+
+nav {
+
+}
+
+ul {
+  display: inline-block;
+  list-style-type: none;
+  text-align: right;
+}
+
+ul li {
+  display: inline;
+  text;
 }
 
 /*--- Form styling ---*/

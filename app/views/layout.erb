@@ -15,6 +15,17 @@
     <div class="title">
       <h1>Quote List</h1>
     </div>
+
+    <nav>
+      <% if logged_in? %>
+        <ul>
+          <li><a href="/quotes/new">Add quote</a></li>
+          <li><a href="/quotes">View all quotes</a></li>
+          <li><a href="/users">Home</a></li>
+        </ul>
+        <% end %>
+    </nav>
+
   </header>
 
   <%= yield %>
