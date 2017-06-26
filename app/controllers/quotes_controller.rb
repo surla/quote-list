@@ -50,6 +50,7 @@ class QuotesController < ApplicationController
 
   patch '/quotes/:id' do
     @quote = Quote.find(params[:id])
+    @quote.update(quote: params[:quote])
     @quote.author = Author.find_or_create_by(name: params[:author])
     @quote.topic = Topic.find_or_create_by(name: params[:topic])
     if @quote.save
