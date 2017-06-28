@@ -1,19 +1,20 @@
-<h1>Quotes List</h1>
-
-<div>
-  <% if locals.any? %>
-    <%= message %>
-  <% end %>
-</div>
-
-<% @quotes.each do |q| %>
-  <div>
-    <p><%= q.quote %> - <%= q.author.name %></p>
-    <p> Topic: <%= q.topic.name %></p>
+<div class="quote row">
+  <div class="">
+    <% if locals.any? %>
+      <%= message %>
+    <% end %>
   </div>
-<% end %>
+
+  <% @quotes.each do |q| %>
+    <div>
+      <p><%= q.quote %> - <%= q.author.name %></p>
+      <p> Topic: <%= q.topic.name %></p>
+    </div>
+  <% end %>
 
 
-<br />
-<a href="/quotes/new">New quote</a>
-<a href="/users">Home</a>
+  <br />
+  <a href="/quotes/new">New quote</a>
+  <a href="/users">Home</a>
+
+</div>

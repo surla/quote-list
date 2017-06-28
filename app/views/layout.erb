@@ -13,14 +13,16 @@
   <header>
     <div class="color-bar"></div>
     <div class="title">
-      <h1>Quote List</h1>
+      <h1><a href="/users">Quote List</a></h1>
     </div>
 
-    <nav>
+    <nav class="row">
       <% if logged_in? %>
         <ul>
-          <li><a href="/quotes/new">Add quote</a></li>
+          <li id="add"><a href="/quotes/new">Add quote</a></li>
           <li><a href="/quotes">View all quotes</a></li>
+          <li><a href="/topics">View all topics</a></li>
+          <li><a href="/authors">View all authors</a></li>
           <li><a href="/users">Home</a></li>
         </ul>
         <% end %>
@@ -29,5 +31,13 @@
   </header>
 
   <%= yield %>
+
+  <footer>
+    <div class="row center">
+      <% if logged_in? %>
+        <a href="/logout">Log out</a>
+      <% end %>
+    </div>
+  </footer>
 </body>
 </html>
