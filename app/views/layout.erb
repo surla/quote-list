@@ -32,12 +32,14 @@
 
   <%= yield %>
 
-  <footer>
-    <div class="row center">
+  <footer class="row">
+    <div class="logout">
       <% if logged_in? %>
-        <a href="/logout">Log out</a>
+        <b><a href="/logout">Log out</a></b>
       <% end %>
     </div>
+
+    <p>MADE BY <a href="http://www.github.com/surla"><span id="name"><b>JOSEPH SURLA</b></span></a></p>
   </footer>
 </body>
 </html>
