@@ -63,16 +63,24 @@ p {
   margin-right: 20px;
 }
 
-#signup a:visit {
+.edit {
+  background-color: #1abc9c;
+  width: 8%;
+  padding: 5px 10px;
+  margin: 0 auto;
+  border-radius: 10%;
+}
+
+#signup,.edit a:visit {
   color: #f3f3f3;
 
 }
 
-#signup a:visited {
+#signup, .edit a:visited {
   color: #f3f3f3;
 }
 
-#signup a:hover {
+#signup, .edit a:hover {
   color: #158e76;
 }
 
@@ -108,7 +116,7 @@ input, .submit {
   padding-left: 15px;
 }
 
-textarea{
+textarea {
   width: 300px;
   height: 108px;
   padding: 15px 15px;
