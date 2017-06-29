@@ -9,4 +9,9 @@ class TopicsController < ApplicationController
     erb :'/topics/show'
   end
 
+  delete '/topics/:id/delete' do
+    @topic = Topic.find(params[:id])
+    @topic.delete
+    redirect :'/topics'
+  end
 end

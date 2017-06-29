@@ -1,5 +1,22 @@
-<h1><%= @topic.name %> quotes</h1>
+<div class="row">
+  <h3><%= @topic.name %> quotes</h3>
+</div>
 
 <% @topic.quotes.each do |q| %>
-  <p><%= q.quote %> - <%= q.author.name %></p>
+  <div class="quote row">
+    <p>&quot;<a href="/quotes/<%= q.id %>"><%= q.quote %></a>&quot;</p>
+    <p class="author"><i><a href="/authors/<%= q.author.id %>"><%= q.author.name %></a></i></p>
+    <div class="topic row">
+      <i><a href="/topics/<%= q.topic.id %>"><%= q.topic.name %></a></i>
+    </div>
+  </div>
+<% end %>
+
+<% if @topic.quotes.empty? %>
+  <div class="center">
+    <form action="/topics/<%= @topic.id%>/delete" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete">
+    </form>
+  </div>
 <% end %>
