@@ -9,13 +9,14 @@ html {
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
+  background-color: #fbfbfb;
 }
 
 .row {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 
 .center {
@@ -37,7 +38,7 @@ a:visited {
 
 p {
   padding-top: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .center {
@@ -114,9 +115,9 @@ input[type="submit"]:hover {
 /*--- Quote styling ---*/
 
 .quote {
-  color: #9a9a9a;
+  background-color: #eeeeee;
   width: 85%;
-  margin: 0 auto;
+  margin: 8px auto;
 }
 
 .topic {
