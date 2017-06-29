@@ -23,7 +23,7 @@ html {
   text-align: center;
 }
 
-h2 {
+h2, h3 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -118,8 +118,15 @@ input[type="submit"]:hover {
   background-color: #eeeeee;
   width: 85%;
   margin: 8px auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .topic {
   text-align: right;
+  font-size: 75%;
+}
+
+.author {
+  font-size: 85%;
 }

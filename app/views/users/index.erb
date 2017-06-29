@@ -1,14 +1,14 @@
 <div class="row">
-  <h3><%= @user.username %>'s' quotes</h3>
+  <h3><%= @user.username %>'s quotes</h3>
 </div>
 
 
 <% @user.quotes.each do |q| %>
   <div class="quote row">
-    <p><a href="/quotes/<%= q.id %>"><%= q.quote %></a></p>
-    <p><a href="/authors/<%= q.author.id %>"><%= q.author.name %></a></p>
+    <p>&quot;<a href="/quotes/<%= q.id %>"><%= q.quote %></a>&quot;</p>
+    <p class="author"><i><a href="/authors/<%= q.author.id %>"><%= q.author.name %></a></i></p>
     <div class="topic row">
-      Topic: <a href="/topics/<%= q.topic.id %>"><%= q.topic.name %></a>
+      <i><a href="/topics/<%= q.topic.id %>"><%= q.topic.name %></a></i>
     </div>
   </div>
 <% end %>
