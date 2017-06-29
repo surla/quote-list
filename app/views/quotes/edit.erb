@@ -1,15 +1,18 @@
-<h1>Edit quote</h1>
+<div class="row">
+  <h3>Edit Quote</h3>
+</div>
 
-<div>
+<div class="center">
   <form  action="/quotes/<%= @quote.id %>" method="post">
-    <input type="hidden" name="_method" value="patch" id="hidden">
-    <input type="textarea" name="quote" value="<%= @quote.quote %>"><br />
-    <input type="text" name="author" value="<%= @quote.author.name %>"><br />
-    <input type="text" name="topic" value="<%= @quote.topic.name %>"><br />
-    <input type="submit"value="Submit Edit">
+    <p></p><input type="hidden" name="_method" value="patch" id="hidden">
+    <p><textarea name="quote"><%= @quote.quote %></textarea></p>
+    <p><input type="text" name="author" value="<%= @quote.author.name %>"></p>
+    <p><input type="text" name="topic" value="<%= @quote.topic.name %>"></p>
+    <p><input type="submit"value="Submit Edit"></p>
   </form>
 </div>
-<div>
+
+<div class="center">
   <form action="/quotes/<%= @quote.id%>/delete" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Delete">
