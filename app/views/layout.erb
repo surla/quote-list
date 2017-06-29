@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Quote List</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quote List</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="/css/master.css">
-</head>
-<body>
-  <header>
-    <div class="color-bar"></div>
-    <div class="title">
-      <h1><a href="/users">Quote List</a></h1>
-    </div>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    <header>
+      <div class="color-bar"></div>
+      <div class="title">
+        <h1>
+          <a href="/users">Quote List</a>
+        </h1>
+      </div>
 
-    <nav class="row">
-      <% if logged_in? %>
+      <nav class="row">
+        <% if logged_in? %>
         <ul>
-          <li id="add"><a href="/quotes/new">Add quote</a></li>
-          <li><a href="/quotes">View all quotes</a></li>
-          <li><a href="/topics">View all topics</a></li>
-          <li><a href="/authors">View all authors</a></li>
-          <li><a href="/users">Home</a></li>
+          <li id="add">
+            <a href="/quotes/new">Add quote</a>
+          </li>
+          <li>
+            <a href="/quotes">View all quotes</a>
+          </li>
+          <li>
+            <a href="/topics">View all topics</a>
+          </li>
+          <li>
+            <a href="/authors">View all authors</a>
+          </li>
+          <li>
+            <a href="/users">Home</a>
+          </li>
         </ul>
         <% end %>
-    </nav>
+      </nav>
 
-  </header>
+    </header>
 
-  <%= yield %>
+    <%= yield %>
 
-  <footer class="row">
-    <div class="logout">
+    <footer class="row center">
       <% if logged_in? %>
-        <b><a href="/logout">Log out</a></b>
+      <div class="logout">
+        <b>
+          <a href="/logout">Log out</a>
+        </b>
+      </div>
       <% end %>
-    </div>
 
-    <p>MADE BY <a href="http://www.github.com/surla"><span id="name"><b>JOSEPH SURLA</b></span></a></p>
-  </footer>
-</body>
+      <p>MADE BY
+        <a href="http://www.github.com/surla">
+          <span id="name">
+            <b>JOSEPH SURLA</b>
+          </span>
+        </a>
+      </p>
+    </footer>
+  </body>
 </html>
