@@ -1,4 +1,9 @@
-<div class="quote row">
+<div class="row">
+  <h3>Quotes</h3>
+</div>
+
+
+<div class="">
   <div class="">
     <% if locals.any? %>
       <%= message %>
@@ -6,15 +11,12 @@
   </div>
 
   <% @quotes.each do |q| %>
-    <div>
-      <p><%= q.quote %> - <%= q.author.name %></p>
-      <p> Topic: <%= q.topic.name %></p>
+    <div class="quote row">
+      <p>&quot;<a href="/quotes/<%= q.id %>"><%= q.quote %></a>&quot;</p>
+      <p class="author"><i><a href="/authors/<%= q.author.id %>"><%= q.author.name %></a></i></p>
+      <div class="topic row">
+        <i><a href="/topics/<%= q.topic.id %>"><%= q.topic.name %></a></i>
+      </div>
     </div>
   <% end %>
-
-
-  <br />
-  <a href="/quotes/new">New quote</a>
-  <a href="/users">Home</a>
-
 </div>
