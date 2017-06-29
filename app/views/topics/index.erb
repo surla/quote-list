@@ -1,5 +1,11 @@
-<h1>Topics</h1>
+<div class="row">
+  <h3>Topics</h3>
+</div>
 
-<% @topics.each do |t| %>
-  <p><a href="/topics/<%= t.id %>"><%= t.name %></a> </p> 
-<% end %>
+<div class="row center topics">
+  <ul>
+    <% @topics.each do |t| %>
+      <li><a href="/topics/<%= t.id %>"><%= t.name %></a> </li>
+    <% end %>
+  </ul>
+</div>
