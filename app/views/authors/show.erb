@@ -1,8 +1,20 @@
-<h1><%= @author.name %> quotes</h1>
+<div class="row">
+  <h3><%= @author.name %>'s quotes</h3>
+</div>
+
 
 <% @author.quotes.each do |q| %>
-  <p><%= q.quote %></p>
+  <div class="quote row">
+    <p>&quot;<a href="/quotes/<%= q.id %>"><%= q.quote %></a>&quot;</p>
+    <div class="topic row">
+      <i><a href="/topics/<%= q.topic.id %>"><%= q.topic.name %></a></i>
+    </div>
+  </div>
 <% end %>
 
-<a href="/quotes/new">Add quote</a><br />
-<a href="/quotes">Home</a>
+<% if @author.quotes.empty? %>
+  <form class="center" action="/authors/<%= @author.id %>/delete" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
+<% end %>

@@ -8,4 +8,10 @@ class AuthorsController < ApplicationController
     @author = Author.find(params[:id])
     erb :'/authors/show'
   end
+
+  delete '/authors/:id/delete' do
+    @author = Author.find(params[:id])
+    @author.delete
+    redirect :'/authors'
+  end
 end

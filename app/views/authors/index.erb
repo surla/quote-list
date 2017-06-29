@@ -1,5 +1,11 @@
-<h1>Authors</h1>
+<div class="row">
+  <h3>Authors</h3>
+</div>
 
-<% @authors.each do |a| %>
-  <p> <a href="/authors/<%= a.id %>"><%= a.author_name %></a> <%= a.author_name %></p>
-<% end %>
+<div class="row center authors">
+  <ul>
+    <% @authors.each do |a| %>
+      <li><a href="/authors/<%= a.id %>"><%= a.name %></a></li>
+    <% end %>
+  </ul>
+</div>
