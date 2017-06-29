@@ -9,10 +9,12 @@
     </ul>
   </div>
 <% end%>
+<div class="center">
+  <form action="/quotes/new" method="post">
+    <p><textarea name="quote" placeholder="New quote"></textarea></p>
+    <p><input type="text" name="author" placeholder="Author name"></p>
+    <p><input type="text" name="topic" placeholder="Topic"></p>
+    <p><input type="submit" value="Add quote"></p>
 
-<form action="/quotes/new" method="post">
-  <textarea name="quote" placeholder="New quote"></textarea><br />
-  <input type="text" name="author" placeholder="Author name"><br />
-  <input type="text" name="topic" placeholder="Topic">
-  <input type="submit" value="Add quote">
-</form>
+  </form>
+</div>
