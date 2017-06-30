@@ -213,3 +213,7 @@ input[type="submit"]:hover {
   padding: 10px 20px;
   border-radius: 20px;
 }
+
+.topics li:hover, .authors li:hover {
+  background-color: #e6e6e6;
+}
