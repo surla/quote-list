@@ -187,6 +187,10 @@ input[type="submit"]:hover {
   padding-right: 15px;
 }
 
+.quote:hover {
+  background-color: #e4e4e4;
+}
+
 .topic {
   text-align: right;
   font-size: 75%;
