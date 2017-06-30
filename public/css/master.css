@@ -9,7 +9,7 @@ html {
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
-  background-color: #fbfbfb;
+  background-color: #fafafa;
 }
 
 .row {
@@ -24,7 +24,7 @@ html {
 }
 
 h2 {
-  color: #2d2d2d;
+  color: #fbfbfb;
   font-size: 220%;
   letter-spacing: 1.6px;
 }
@@ -37,6 +37,10 @@ h2, h3 {
 a, a:link, a:visited {
   color: #1c1c1c;
   text-decoration: none;
+}
+
+a:hover {
+  color: #1abc9c;
 }
 
 p {
@@ -68,7 +72,8 @@ p {
 /*--- Sign up page ---*/
 
 .hero {
-  background-image: url("/background.jpg");
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("/background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("/background.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -76,6 +81,7 @@ p {
   color: #808080;
   letter-spacing: 1.3px;
 }
+
 #signup {
   background-color: #1abc9c;
   border-radius: 50px;
@@ -83,24 +89,23 @@ p {
   margin-right: 20px;
 }
 
-.edit {
+#edit {
   background-color: #1abc9c;
-  width: 8%;
-  padding: 5px 10px;
-  margin: 0 auto;
+  color: #a2a2a2;
+  padding: 6px 13px;
   border-radius: 10px;
 }
 
-#signup,.edit a:visit {
+#signup,#edit a:visit {
   color: #f3f3f3;
 
 }
 
-#signup, .edit a:visited {
+#signup, #edit a:visited {
   color: #f3f3f3;
 }
 
-#signup a:hover, #login a:hover, .edit a:hover  {
+#signup a:hover, #login a:hover, #edit a:hover  {
   color: #fbfbfb;
 }
 
@@ -113,7 +118,7 @@ nav {
 ul {
   display: inline-block;
   list-style-type: none;
-  margin-left: autp;
+  margin-left: auto;
   margin-right: 0;
 }
 
@@ -188,7 +193,7 @@ input[type="submit"]:hover {
 }
 
 .quote:hover {
-  background-color: #e4e4e4;
+  background-color: #e6e6e6;
 }
 
 .topic {
