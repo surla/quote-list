@@ -109,11 +109,65 @@ p {
   color: #fbfbfb;
 }
 
-/*--- Unordered list style ---*/
+/*--- Add quote link ---*/
 
-nav {
+.add-quote {
   display: inline-block;
+  float: right;
+  margin-top: 19px;
+  margin-right: 75px;
+  padding: 6px 15px 8px 15px;
+  border: 1.3px solid #1abc9c;
+  letter-spacing: 1.5px;
+  border-radius: 20px;
+  font-size: 16px;
 }
+
+.add-quote:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.add-quote a {
+ background-color: #3498db;
+ border-radius: 25px;
+ color: 18px;
+}
+
+.add-quote a:hover {
+  background-color: #1abc9c;
+}
+
+/*--- Navigation ---*/
+
+nav ul {
+  margin-top: 16px;
+}
+
+nav ul li {
+  background-color: #1abc9c;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px 10px 5px 14px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+nav ul li a {
+  color: #eee !important;
+}
+
+nav ul li:hover {
+  background-color: #eee !important;
+  color: #1abc9c;
+}
+
+nav ul li a:hover {
+  color: #1abc9c !important;
+}
+/*--- Unordered list style ---*/
 
 ul {
   display: inline-block;
@@ -131,15 +185,14 @@ ul li {
 
 footer {
   width: 100%;
-  margin-top: 10px;
   font-size: 12px;
   letter-spacing: 1px;
 }
 
 .logout {
   display: inline-block;
-  font-size: 18px;
-  margin-top: 25px;
+  font-size: 14px;
+  margin-top: 65px;
   margin-bottom: 25px;
   padding: 2px 7px;
   border: 1.2px solid #e3e3e3;
@@ -151,12 +204,6 @@ footer {
   color: #1abc9c;
   font-size: 15px;
   letter-spacing: 1.5px;
-}
-
-/*--- Navigation ---*/
-
-.add {
-  border: 2px solid red;
 }
 
 

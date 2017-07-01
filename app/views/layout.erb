@@ -10,41 +10,46 @@
     <link rel="stylesheet" href="/css/master.css">
   </head>
   <body>
+    <div class="color-bar"></div>
     <header>
-      <div class="color-bar"></div>
       <div class="title">
         <h1>
           <a href="/users">Quote List</a>
         </h1>
       </div>
 
-      <nav class="row">
-        <% if logged_in? %>
-        <ul>
-          <li id="add">
-            <a href="/quotes/new">Add quote</a>
-          </li>
-          <li>
-            <a href="/quotes">View all quotes</a>
-          </li>
-          <li>
-            <a href="/topics">View all topics</a>
-          </li>
-          <li>
-            <a href="/authors">View all authors</a>
-          </li>
-          <li>
-            <a href="/users">Home</a>
-          </li>
-        </ul>
-        <% end %>
-      </nav>
+      <% if logged_in? %>
+      <a href="/quotes/new">
+        <div class="add-quote">
+          Add quote
+        </div>
+      </a>
+      <% end %>
 
     </header>
 
-    <%= yield %>
+      <%= yield %>
 
     <footer class="row center">
+      <nav class="row">
+        <% if logged_in? %>
+          <ul>
+            <li>
+              <a href="/users" class="home-link row">Home</a>
+            </li>
+            <li>
+              <a href="/quotes">Quotes</a>
+            </li>
+            <li>
+              <a href="/topics">Topics</a>
+            </li>
+            <li>
+              <a href="/authors">Authors</a>
+            </li>
+          </ul>
+        <% end %>
+      </nav>
+
       <% if logged_in? %>
       <div class="logout">
         <b>
