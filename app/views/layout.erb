@@ -31,8 +31,8 @@
       <%= yield %>
 
     <footer class="row center">
+      <% if logged_in? %>
       <nav class="row">
-        <% if logged_in? %>
           <ul>
             <li>
               <a href="/users" class="home-link row">Home</a>
@@ -47,10 +47,9 @@
               <a href="/authors">Authors</a>
             </li>
           </ul>
-        <% end %>
       </nav>
 
-      <% if logged_in? %>
+
       <div class="logout">
         <b>
           <a href="/logout">Log out</a>
