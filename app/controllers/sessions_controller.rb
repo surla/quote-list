@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   get '/login' do
+    @user = User.new
     erb :'/sessions/new'
   end
 

@@ -1,14 +1,18 @@
 <div class="row">
-  <h2>Sign up</h2>
+  <h3>Sign up</h3>
 
   <% if @user.errors.any? %>
-    <div>
-      <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+  <div class="errors row center">
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li>
+        <p>
+          <i><%= msg %></i>
+        </p>
+      </li>
+      <% end %>
+    </ul>
+  </div>
   <% end %>
 
   <form action="/signup" method="post">
@@ -18,5 +22,7 @@
     <p><input type="submit" value="Sign up" class="submit"></p>
   </form>
 
-  <p>Have an account? <a href="/login">Log in</a></p>
+  <p>Have an account?
+    <a href="/login">Log in</a>
+  </p>
 </div>

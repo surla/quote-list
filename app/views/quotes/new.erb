@@ -2,17 +2,24 @@
   <h3>Add quote</h3>
 </div>
 <% if @quote.errors.any? %>
-  <div>
-    <ul>
-      <% @quote.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
+<div class="errors row center">
+  <ul>
+    <% @quote.errors.full_messages.each do |msg| %>
+    <li>
+      <p>
+        <i><%= msg %></i>
+      </p>
+    </li>
+    <% end %>
+  </ul>
+</div>
 <% end%>
+
 <div class="center">
   <form action="/quotes/new" method="post">
-    <p><textarea name="quote" placeholder="New quote"></textarea></p>
+    <p>
+      <textarea name="quote" placeholder="New quote"></textarea>
+    </p>
     <p><input type="text" name="author" placeholder="Author name"></p>
     <p><input type="text" name="topic" placeholder="Topic"></p>
     <p><input type="submit" value="Add quote"></p>

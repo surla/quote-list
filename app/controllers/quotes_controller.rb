@@ -54,7 +54,7 @@ class QuotesController < ApplicationController
     @quote.author = Author.find_or_create_by(name: params[:author])
     @quote.topic = Topic.find_or_create_by(name: params[:topic])
     if @quote.save
-      erb :'/quotes/show', locals: {message: "Successfully edited quote"}
+      erb :'/quotes/show', locals: {message: "Successfully edited quote."}
     else
       erb :'/quotes/edit'
     end
@@ -63,6 +63,6 @@ class QuotesController < ApplicationController
   delete '/quotes/:id/delete' do
     @quote = Quote.find(params[:id])
     @quote.delete
-    redirect :'/quotes'
+    erb :'/quotes/index', locals: {message: "Successfully deleted quote"}
   end
 end

@@ -69,6 +69,12 @@ p {
   margin-bottom: 5px;
 }
 
+/*-- Error style --*/
+.errors ul li p {
+  color: #ff432f;
+  font-size: 80%;
+}
+
 /*--- Sign up page ---*/
 
 .hero {
