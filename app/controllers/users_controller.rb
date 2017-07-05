@@ -1,13 +1,21 @@
 class UsersController < ApplicationController
 
   get '/users' do
-    @user = User.find(session[:user_id])
-    erb :'/users/index'
+    if logged_in?
+      @user = User.find(session[:user_id])
+      erb :'/users/index'
+    else
+      redirect :'/signup'
+    end
   end
 
   get '/signup' do
-    @user = User.new
-    erb :'/users/new'
+    if logged_in?
+      redirect :'/users'
+    else
+      @user = User.new
+      erb :'/users/new'
+    end
   end
 
   post '/signup' do
