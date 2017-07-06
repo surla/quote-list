@@ -1,12 +1,20 @@
 class TopicsController < ApplicationController
   get '/topics' do
-    @topics = Topic.all
-    erb :'/topics/index'
+    if logged_in?
+      @topics = Topic.all
+      erb :'/topics/index'
+    else
+      redirect :'/login'
+    end
   end
 
   get '/topics/:id' do
-    @topic = Topic.find(params[:id])
-    erb :'/topics/show'
+    if logged_in?
+      @topic = Topic.find(params[:id])
+      erb :'/topics/show'
+    else
+      redirect :'/login'
+    end
   end
 
   delete '/topics/:id/delete' do
