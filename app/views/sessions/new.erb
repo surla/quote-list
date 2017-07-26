@@ -1,4 +1,9 @@
 <div class="center">
+  <div class="">
+    <% if locals.any? %>
+      <%= message %>
+    <% end %>
+
   <h3>Log in</h3>
 
   <form action="/login" method="post">

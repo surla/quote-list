@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       erb :'/users/index'
     else
-      erb :'/sessions/new'
+      erb :'/sessions/new', locals: {message: "Username or password was incorrect. Try again."}
     end
   end
 
